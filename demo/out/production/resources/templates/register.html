@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Registracija emaila</h1>
+    <form role="form" th:object = "${formUser}" method = "POST" th:action = "@{/registerHTML}">
+        <div class="form-group col-md-6">
+            <label for="email">Unesite email</label>
+            <input th:field = "*{email}" id="email" type="text" th:placeholder="email">
+        </div>
+        <input type="submit" value="Registriraj se">
+        <a href="/">Povratak</a>
+
+    </form>
+</body>
+</html>
